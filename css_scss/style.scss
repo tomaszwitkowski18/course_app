@@ -1,0 +1,705 @@
+@mixin pc-1200 {
+    @media only screen and (max-width : 1200px) {
+        @content;
+    }
+}
+
+@mixin phone-850 {
+    @media only screen and (max-width : 850px) {
+            @content;
+        }
+}
+
+@mixin phone-768 {
+    @media only screen and (max-width : 768px) {
+            @content;
+        }
+}
+
+@mixin phone-620 {
+    @media only screen and (max-width : 620px) {
+        @content;
+    }
+}
+
+@mixin phone-370 {
+    @media only screen and (max-width : 370px) {
+        @content;
+    }
+}
+
+@mixin phone-320 {
+    @media only screen and (max-width : 320px) {
+        @content;
+    }
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper_header {
+    width: 95%;
+    @include flex();
+}
+
+.header {
+    width: 100%;
+    height: 12.5vh;
+    border-bottom: #f0f2f1 1px solid;
+    background-color: #fff;
+    @include flex();
+    font-family: 'Lato', sans-serif;
+    color: #343539;
+}
+
+.pannel {
+    width: 50%;
+}
+
+.left {
+    @include flex();
+    justify-content: flex-start;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.right {
+    @include flex();
+    justify-content: flex-end;
+    font-size: 16px;
+}
+
+.wrapper_loginside {
+    width: 74%;
+    @include flex();
+    @include phone-768(){
+        width: 90%;   
+    }
+}
+
+.main {
+    width: 100%;
+    @include flex();
+}
+
+.loginside {
+    margin-top: 18vh;
+    width: 100%;
+    height: 55vh;
+    box-shadow: 0 10px 20px #e0dfdf;
+    @include flex();
+    @include phone-768(){
+        margin-top: 20vh;   
+    }
+}
+
+.photo_loginside {
+    width: 40%;
+    height: 100%;
+    @include flex();
+    @include phone-768(){
+        display: none;
+    }
+}
+
+.userpannel_loginside {
+    width: 60%;
+    height: 100%;
+    @include flex();
+    flex-flow: column;
+}
+
+.welcome_text {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    color: #00d573;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 10%;
+}
+
+input[type=text], input[type=password]{
+    border: 0;
+    height: 5vh;
+    width: 90%;
+    border-radius: 35px;
+    padding: 5px 0 5px 25px;
+    //margin-bottom: 2vh;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    box-shadow: 0 6px 15px #cfcfcf;
+    font-weight: 500;
+    color: #5e5e5e;
+    &:focus {
+        outline: none;
+    }
+    @include phone-768(){
+        width: 100%;   
+    }
+}
+
+.login_signin {
+    margin-bottom: 2vh;
+}
+
+.passwd_signin {
+    margin-bottom: 5vh;
+}
+
+.form_loginside_container {
+    width: 100%;
+    height: 60%;
+    @include flex();
+    flex-direction: column;
+}
+
+.form_loginside, .form_forgot {
+    width: 100%;
+    @include flex();
+    flex-direction: column;
+}
+
+.btn_send {
+    align-self: flex-end;
+    margin-right: 4%;
+    margin-bottom: -30px;
+    border: 0;
+    background-color: #00d573;
+    border-radius: 30px;
+    color: #fff;
+    width: 25%;
+    height: 6vh;
+    font-size: 17px;
+    z-index: 100;
+    font-family: 'Lato', sans-serif;
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        outline: none;
+    }
+    @include phone-768(){
+        width: 55%;
+        margin-right: -5%;
+    }
+}
+
+.btn_login {
+    @include phone-370() {
+        width: 47%;
+    }
+}
+
+.forgot_password {
+    width: 100%;
+    @include flex();
+    justify-content: flex-start;
+}
+
+.btn_forgot {
+    margin-left: 6%;
+    text-decoration: none;
+    color: #818181;
+    font-family: 'Lato', sans-serif;
+    @include phone-768(){
+        font-size: 13px;   
+    }
+    @include phone-320() {
+        width: 20%;
+    }
+}
+
+.forgot_passwd_input_container {
+    height: 40%;
+    align-items: flex-start; 
+}
+
+.forgot_password_text {
+    @include phone-768(){
+        margin-bottom: -3%;
+    }
+    @include phone-620(){
+        margin-bottom: -7%;
+    }
+}
+
+.btn_send_forgot {
+    margin: 5% 0 0 4%;
+}
+
+.footer {
+    width: 100%;
+    height: 8vh;
+    border-top: #f0f2f1 1px solid;
+    background-color: #fff;
+    @include flex();
+    font-family: 'Lato', sans-serif;
+    color: #343539;
+}
+
+.wrapper_footer {
+    width: 95%;
+    @include flex();
+}
+
+.wrapper_main {
+    width: 90%;
+    @include flex();
+    flex-direction: column;
+}
+
+.teacher_info {
+    margin-top: 10vh;
+    width: 100%;
+    @include flex();
+    @include phone-620() {
+        flex-direction: column;
+    }
+}
+
+.teacher_showcase {
+    width: 75%;
+    @include flex();
+    flex-direction: column;
+}
+
+.teacher_photo_case {
+    width: 25%;
+    @include flex();
+}
+
+.teacher_photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.teacher_text {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    @include flex();
+    color: #343539;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.welcome_text_teacher {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    width: 100%;
+    color: #00d573;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 3vh;
+}
+
+.course_case {
+    width: 85%;
+    @include flex();
+    margin:20vh 0 4vh 0;
+    flex-wrap: wrap;
+    @include phone-850(){
+        width: 100%;
+    }
+    @include phone-620(){
+        flex-direction: column;
+        width: 100%;
+        margin: 10vh 0 4vh 0;
+    }
+}
+
+.course {
+    width: 31%;
+    @include flex();
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    color: #343539;
+    border: 1px solid #f0f2f1;
+    border-top: 0;
+    margin: 10px 3px 20px 3px;
+    justify-content: flex-start;
+    &:hover {
+        cursor: pointer;
+    }
+    @include phone-768(){
+        width: 48%;
+        border: none;
+    }
+    @include phone-620(){
+        width: 100%;
+        text-align: justify;
+    }
+}
+
+.cousre_image {
+    width: 100px;
+    height: 100px;
+}
+
+.course_title {
+    width: 100%;
+    @include flex();
+    justify-content: flex-start;
+    font-weight: bolder;
+    font-size: 22px;
+    margin: 3vh 0 3vh 0;
+}
+
+.course_description {
+    width: 80%;
+    font-size: 15px;
+    word-spacing: 5px;
+    line-height: 25px;
+    @include phone-768(){
+        width: 100%;
+        line-height: auto;
+    }
+}
+
+.wrapper_settings {
+    width: 90%;
+    @include flex();
+    justify-content: space-between;
+}
+
+.settings {
+    width: 100%;
+    margin: 10vh 0 10vh 0;
+    @include flex();
+    justify-content: space-between;
+    @include phone-768(){
+        flex-direction: column;
+    }
+}
+
+.case_settings{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_settings {
+    width: 50%;
+    @include flex();
+}
+
+.margin_deleter {
+    margin: 0;
+}
+
+.sizer_settings {
+    width: 35%;
+    @include phone-768(){
+        width: 100%;
+    }
+}
+
+.setting_title {
+    font-family: 'Lato', sans-serif;
+    color: #343539;
+    @include flex();
+    flex-direction: column;
+}
+
+.broker {
+    width: 100%;
+    justify-self: flex-start;
+}
+
+.password_settings, .login_settings, .website_settings, .logo_settings {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vh 0 3vh 0;
+}
+
+.logo_settings, .website_settings{
+    @include phone-768(){
+        display: none;
+    }
+}
+
+.btn_send_settings {
+    border: 0;
+    background-color: #00d573;
+    border-radius: 50%;
+    color: #fff;
+    height: 30px;
+    width: 50px;
+    font-size: 17px;
+    z-index: 100;
+    margin-left: 10px;
+    font-family: 'Lato', sans-serif;
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.info {
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    font-size: 8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #00d573;
+    color: #fff;
+    @include flex();
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.info_notification {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 11px;
+    background: #00d573;
+    width: 30vh;
+    border-radius: 30px;
+    padding: 4px;
+    font-family: 'Lato', sans-serif;
+    display: none;
+}
+
+.info:hover .info_notification {
+    display: block;
+}
+
+.upload-field-customized{
+    width: 70%;
+    height: 6vh;
+    background: #00d573;
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    @include flex();
+    input[type="file"]{
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      opacity: 0;
+      cursor: pointer;
+      left: 0px;
+      top: 0px;
+      z-index: 10;
+    }
+    
+    span{
+      text-align: center;
+      width: 100%;
+      display: block;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+
+  .file_view {
+      width: 25%;
+      height: 6vh;
+      border: 1px solid black;
+  }
+
+  .sizer_button_upload {
+      width: 15%;
+      @include pc-1200(){
+          width: 20%;
+      }
+      @include phone-850(){
+          width: 25%;
+      }
+  }
+
+  .justifier_top {
+      align-self: flex-start;
+      @include phone-768(){
+        align-self: auto;
+    }
+  }
+
+.fixed_bot {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+}
+
+.course_wrapper {
+    width: 95%;
+    @include flex();
+    align-items: flex-start;
+    @include phone-768(){
+    flex-direction: column;
+    }
+}
+
+.courses_menu {
+    @include flex();
+    flex-direction: column;
+    width: 15%;
+    @include phone-768(){
+        width: 100%;
+    }
+}
+
+.title {
+    width: 100%;
+    padding: 15px;
+    @include flex();
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    color: #343539;
+}
+
+ol {
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    color: #343539;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.lesson_name {
+    font-size: 18px;
+    width: 100%;
+    @include flex();
+    margin-top: 5px;
+}
+
+.checked {
+    color: #00d573;
+}
+
+.lesson_main {
+    width: 85%;
+    @include phone-768(){
+        width: 100%;
+    }
+}
+
+.title_lesson {
+    border-bottom: #f0f2f1 1px solid;
+    width: 100%;
+    padding: 20px;
+    padding-right: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    color: #343539;
+    @include phone-768(){
+        @include flex();
+        width: 100%;
+    }
+}
+
+.lesson_description {
+    padding: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #343539;
+    border-bottom: #f0f2f1 1px solid;
+}
+
+.files_download {
+    @include flex();
+    padding: 20px;
+    justify-content: flex-start;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #343539;
+}
+
+.file-db {
+    margin-left: 2%;
+}
+
+.lesson_video {
+    @include flex();
+}
+
+iframe {
+    width: 80%;
+    height: 70vh;
+}
+
+.main-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 10%);
+    font-family: 'Lato', sans-serif;
+}
+
+.title-grid-container{
+    grid-area: 2/2/2/5;
+    width: 100%;
+    @include flex();
+}
+
+.title-grid{
+    font-size: 40px;
+    @include phone-620(){
+        font-size: 28px;
+    }
+    @include phone-370() {
+        font-size: 23px;
+    }
+}
+
+.description {
+    grid-area: 4/2/5/5;
+    @include flex();
+    @include phone-620(){
+        font-size: 15px;
+    }
+    @include phone-370() {
+        font-size: 12px;
+    }
+}
+
+.sh-mockups {
+    grid-area: 5/3/6/4;
+    @include flex();
+}
+
+.navi-grid {
+    grid-area: 6/2/9/5;
+    @include flex();
+}
+
+.links-list {
+    list-style-type: none;
+}
+
+.link {
+    margin: 15px 0 15px 0;
+    @include flex();
+}
+
+.link-grid-nav {
+    text-decoration: none;
+    color: #000;
+    margin-right: 5px;
+}
